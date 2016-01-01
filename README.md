@@ -7,5 +7,6 @@ Very much like Baulderdash, or Dictionairy Dabble.
 `npm install`
 
 ## Running
-You could always use the standard: `npm start`
-In development I recommend `nodemon ./bin/www`
+Run both the following
+`grunt watch # to watch scss changes` 
+`nodemon ./bin/www # to start the server`
