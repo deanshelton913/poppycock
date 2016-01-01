@@ -10,7 +10,7 @@ Very much like Baulderdash, or Dictionairy Dabble.
 Run both the following
 
 
-`grunt watch # to watch scss changes` 
+`grunt watch`  # to watch scss changes 
 
 
-`nodemon ./bin/www # to start the server`
+`nodemon ./bin/www`  # to start the server
