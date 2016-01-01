@@ -1,4 +1,21 @@
+//fonts
+$regular_font: 'Raleway';
+$cursive_font: 'Pacifico';
+$bubble_font: 'Chewy';
+
 * {
   font-size: 13px;
-  font-family: $base_font, $fallback_font;
+  font-family: $regular_font;
+  color: $black;
 }
+
+.wordmark {
+  font-family: $bubble_font;
+  font-size: 4em;
+  margin: 0 3em 0 0;
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+  transform: rotate(-3deg);
+  float: left;
+}
+

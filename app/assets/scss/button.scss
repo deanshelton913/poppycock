@@ -1,4 +1,6 @@
 .button {
+  width:98%;
+  margin: 1%;
   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: inset 0 1px 0 0 $white;
   background: linear-gradient(to bottom, $color_gallery_approx 5%, $color_bon_jour_approx 100%);
@@ -10,8 +12,6 @@
   display: inline-block;
   cursor: pointer;
   color: $color_tapa_approx;
-  font-family: $base_font;
-  font-size: 15px;
   font-weight: bold;
   padding: 9px 24px;
   text-decoration: none;
@@ -26,4 +26,31 @@
     position: relative;
     top: 1px;
   }
+}
+
+.cta {
+  @extend .button;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: inset 0 1px 0 0 $color_tea_green_approx;
+  background: linear-gradient(to bottom, $color_conifer_approx 5%, $color_conifer_approx 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_conifer_approx', endcolorstr='$color_conifer_approx',gradienttype=0);
+  background-color: $color_conifer_approx;
+  border: 1px solid $color_lima_approx;
+  text-shadow: 0 1px 0 $color_sushi_approx;
+  color: $white;
+
+  &:hover {
+    background: linear-gradient(to bottom, $color_conifer_approx 5%, $color_conifer_approx 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_conifer_approx', endcolorstr='$color_conifer_approx',gradienttype=0);
+    background-color: $color_conifer_approx;
+  }
+}
+
+.how-to-play {
+  @extend .button;
+}
+
+.ready {
+  @extend .cta;
+  font-size: 2em;
 }

@@ -1,13 +1,2 @@
 @import '../button';
 
-.how-to-play-wrapper {
-  text-align: right;
-
-  .how-to-play {
-    @extend .button;
-
-    i {
-      margin-left: 1em;
-    }
-  }
-}

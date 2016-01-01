@@ -1,0 +1,47 @@
+$player-one-color: #801515;
+$player-two-color: #3C10C9;
+$player-three-color: #2B932B;
+$player-four-color: #B79535;
+
+.player {
+  text-align: center;
+
+  &.one{
+    color: $player-one-color;
+  }
+  &.two{
+    color: $player-two-color;
+  }
+  &.three{
+    color: $player-three-color;
+  }
+  &.four{
+    color: $player-four-color;
+  }
+}
+
+.player-list {
+  @extend .clearfix;
+  font-size: 2.5em;
+  padding: 0;
+
+  li {
+    width: 48%;
+    margin: 0;
+    list-style: none;
+    float: left;
+    padding: 1%;
+
+    button {
+      @extend .button;
+      width:100%;
+      font-family: $regular_font;
+      font-size: 1.8em;
+
+      i {
+        display: block;
+        font-size: 3em;
+      }
+    }
+  }
+}

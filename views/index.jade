@@ -1,13 +1,19 @@
 extends layout
 
 block content
-  h1.welcome POPPYCOCK!
-  .how-to-play-wrapper
-    button.how-to-play How To Play
+  h1.wordmark POPPYCOCK
+  button.ready I'm Ready!
+  button.how-to-play How To Play
   ul.player-list
-    li Player 1
-    li Player 2
-    li Player 3
-    li Player 4
-  .play-button-wrapper
-    button.play Play
+    li
+      button Waiting...
+        i.player.one.fa.fa-gamepad
+    li
+      button(disabled="disabled") Waiting..
+        i.player.two.fa.fa-gamepad
+    li
+      button(disabled="disabled") Waiting..
+        i.player.three.fa.fa-gamepad
+    li
+      button(disabled="disabled") Waiting..
+        i.player.four.fa.fa-gamepad
