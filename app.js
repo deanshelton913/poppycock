@@ -5,10 +5,10 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
-    howTo = require('./routes/how-to'),
-    definitions = require('./routes/definitions'),
-    votes = require('./routes/votes'),
-    summary = require('./routes/summary'),
+    // howTo = require('./routes/how-to'),
+    // definitions = require('./routes/definitions'),
+    // votes = require('./routes/votes'),
+    // summary = require('./routes/summary'),
     app = express();
 
 // view engine setup
@@ -23,10 +23,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
-app.use('/how-to', howTo);
-app.use('/definitions', definitions);
-app.use('/votes', votes);
-app.use('/summary', summary);
+// app.use('/how-to', howTo);
+// app.use('/definitions', definitions);
+app.use('/votes', routes);
+// app.use('/summary', summary);
 
 
 // catch 404 and forward to error handler
