@@ -1,0 +1,8 @@
+.play-button-wrapper {
+  text-align: center;
+  .play {
+    @extend .button;
+    width: 50%;
+
+  }
+}
