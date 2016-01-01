@@ -1,0 +1,29 @@
+.button {
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: inset 0 1px 0 0 $white;
+  background: linear-gradient(to bottom, $color_gallery_approx 5%, $color_bon_jour_approx 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_gallery_approx', endcolorstr='$color_bon_jour_approx',gradienttype=0);
+  background-color: $color_gallery_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 6px;
+  border: 1px solid $color_alto_approx;
+  display: inline-block;
+  cursor: pointer;
+  color: $color_tapa_approx;
+  font-family: $base_font;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 24px;
+  text-decoration: none;
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: 0 1px 0 $white;
+  &:hover {
+    background: linear-gradient(to bottom, $color_bon_jour_approx 5%, $color_gallery_approx 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_bon_jour_approx', endcolorstr='$color_gallery_approx',gradienttype=0);
+    background-color: $color_bon_jour_approx;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
