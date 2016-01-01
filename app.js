@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require('express'),
     path = require('path'),
     favicon = require('serve-favicon'),
     logger = require('morgan'),
@@ -6,7 +6,6 @@ var express = require('express');
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
     users = require('./routes/users'),
-    sassMiddleware = require('node-sass-middleware'),
     app = express();
 
 // view engine setup
@@ -19,13 +18,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(
-    sassMiddleware({
-         src: __dirname + '/assets/scss',
-         dest: __dirname + '/public/stylesheets',
-         debug: true,
-     })
-  );
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
