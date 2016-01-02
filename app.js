@@ -14,7 +14,7 @@ var express = require('express'),
 
     // Routes
     routes = {
-      '/': appController,
+      '/': appController, // catch-all controller
       '/votes': votesController
     };
 

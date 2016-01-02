@@ -4,7 +4,7 @@ $cursive_font: 'Pacifico';
 $bubble_font: 'Chewy';
 
 * {
-  font-size: 13px;
+  font-size: 14px;
   font-family: $regular_font;
   color: $black;
 }
@@ -12,10 +12,25 @@ $bubble_font: 'Chewy';
 .wordmark {
   font-family: $bubble_font;
   font-size: 4em;
-  margin: 0 3em 0 0;
+  margin: 0;
   -ms-transform: rotate(-3deg); /* IE 9 */
   -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
   transform: rotate(-3deg);
-  float: left;
 }
 
+h1 {
+  font-size: 3em;
+  margin: 1em 0 0;
+}
+h2 {
+  font-size: 2em;
+  margin: 1em 0 0;
+}
+h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+p {
+  margin: 1em 0 2em;
+}

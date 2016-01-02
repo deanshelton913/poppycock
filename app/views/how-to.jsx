@@ -1,3 +1,5 @@
+/* @jsx React.DOM */
+
 var React = require('react');
 var DefaultLayout = require('./layouts/default');
 
@@ -5,8 +7,11 @@ module.exports = React.createClass({
   render: function() {
     return (
       <DefaultLayout title={this.props.title}>
-        <div>{this.props.error}</div>
-      </DefaultLayout>
+        <section>
+          <h2>How To</h2>
+          <p>Instructions go here.</p>
+        </section>
+    </DefaultLayout>
     );
   }
 });

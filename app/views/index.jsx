@@ -1,12 +1,13 @@
+/* @jsx React.DOM */
+
 var React = require('react');
 var DefaultLayout = require('./layouts/default');
 
-var WaitingRoom = React.createClass({
+module.exports = React.createClass({
   render: function() {
     return (
       <DefaultLayout title={this.props.title}>
-        <div id="content">
-          <h1 className="wordmark">POPPYCOCK</h1>
+        <div id="main">
           <button className="ready">Im Ready</button>
           <button className="how-to-play">How To Play</button>
           <ul className="player-list">
@@ -28,5 +29,3 @@ var WaitingRoom = React.createClass({
     );
   }
 });
-
-module.exports = WaitingRoom;

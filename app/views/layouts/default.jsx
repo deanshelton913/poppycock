@@ -1,5 +1,6 @@
-var React = require('react');
+/* @jsx React.DOM */
 
+var React = require('react');
 var DefaultLayout = React.createClass({
   render: function() {
     return (
@@ -12,7 +13,10 @@ var DefaultLayout = React.createClass({
             <link rel="stylesheet" href="/stylesheets/app.css"/>
         </head>
         <body>
+          <div id="content">
+            <h1 className="wordmark">POPPYCOCK</h1>
             {this.props.children}
+          </div>
         </body>
       </html>
     );

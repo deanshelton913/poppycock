@@ -3,13 +3,11 @@
 @import 'typography';
 @import 'components';
 
-// body {
-//   background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/concrete_seamless.png");
-// }
-
-
 #content {
   max-width: 720px;
   margin: 0 auto;
 }
 
+#main {
+  padding-top: 1em;
+}
