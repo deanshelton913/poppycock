@@ -16,7 +16,7 @@ var express = require('express'),
     routes = {
       '/': appController,
       '/votes': votesController
-    }
+    };
 
 // View Engine setup
 app.set('views', path.join(__dirname, 'app/views'));
