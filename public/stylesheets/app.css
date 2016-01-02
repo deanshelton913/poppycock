@@ -1,0 +1,135 @@
+.clearfix:after, .player-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  font-size: 14px;
+  font-family: "Raleway";
+  color: #4C4B4B;
+}
+
+.wordmark {
+  font-family: "Chewy";
+  font-size: 4em;
+  margin: 0;
+  -ms-transform: rotate(-3deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-3deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-3deg);
+}
+
+h1 {
+  font-size: 3em;
+  margin: 1em 0 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 1em 0 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+p {
+  margin: 1em 0 2em;
+}
+
+.button, .cta, .ready, .how-to-play, .player-list li button {
+  width: 98%;
+  margin: 1%;
+  box-shadow: inset 0 1px 0 0 #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_gallery_approx', endcolorstr='$color_bon_jour_approx',gradienttype=0);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-weight: bold;
+  padding: 9px 24px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.button:hover, .cta:hover, .ready:hover, .how-to-play:hover, .player-list li button:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_bon_jour_approx', endcolorstr='$color_gallery_approx',gradienttype=0);
+  background-color: #dfdfdf;
+}
+.button:active, .cta:active, .ready:active, .how-to-play:active, .player-list li button:active {
+  position: relative;
+  top: 1px;
+}
+
+.cta, .ready {
+  box-shadow: inset 0 1px 0 0 #d9fbbe;
+  background: linear-gradient(to bottom, #b8e356 5%, #b8e356 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_conifer_approx', endcolorstr='$color_conifer_approx',gradienttype=0);
+  background-color: #b8e356;
+  border: 1px solid #83c41a;
+  text-shadow: 0 1px 0 #86ae47;
+  color: #ffffff;
+}
+.cta:hover, .ready:hover {
+  background: linear-gradient(to bottom, #b8e356 5%, #b8e356 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_conifer_approx', endcolorstr='$color_conifer_approx',gradienttype=0);
+  background-color: #b8e356;
+}
+
+.ready {
+  font-size: 2em;
+}
+
+.player {
+  text-align: center;
+}
+.player.one {
+  color: #801515;
+}
+.player.two {
+  color: #3C10C9;
+}
+.player.three {
+  color: #2B932B;
+}
+.player.four {
+  color: #B79535;
+}
+
+.player-list {
+  font-size: 2.5em;
+  padding: 0;
+}
+.player-list li {
+  width: 48%;
+  margin: 0;
+  list-style: none;
+  float: left;
+  padding: 1%;
+}
+.player-list li button {
+  width: 100%;
+  font-family: "Raleway";
+  font-size: 1.8em;
+}
+.player-list li button i {
+  display: block;
+  font-size: 3em;
+}
+
+#content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#main {
+  padding-top: 1em;
+}
+
+/*# sourceMappingURL=app.css.map */
