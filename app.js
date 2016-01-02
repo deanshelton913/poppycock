@@ -5,34 +5,44 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
-    // howTo = require('./routes/how-to'),
-    // definitions = require('./routes/definitions'),
-    // votes = require('./routes/votes'),
-    // summary = require('./routes/summary'),
+    expressControllers = require('express-controller'),
+    router = express.Router(),
     app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// View Engine setup
+app.set('views', path.join(__dirname, 'app/views'));
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// Favicon
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
+// Logger
 app.use(logger('dev'));
+
+// Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Static route
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Controlled routes
 app.use('/', routes);
+// app.use(router);
+// expressControllers
+//       .setDirectory( __dirname + 'app/controllers')
+//       .bind(app);
 
 
+// Errors
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-
-// error handlers
 
 // development error handler
 // will print stacktrace
