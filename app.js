@@ -4,10 +4,13 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    routes = require('./routes/index'),
-    expressControllers = require('express-controller'),
     router = express.Router(),
-    app = express();
+    app = express(),
+
+    // Controllers
+    appController = require('./app/controllers/AppController'),
+    votesController = require('./app/controllers/VotesController'),
+    definitionsController = require('./app/controllers/DefinitionsController');
 
 // View Engine setup
 app.set('views', path.join(__dirname, 'app/views'));
@@ -29,11 +32,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Controlled routes
-app.use('/', routes);
-// app.use(router);
-// expressControllers
-//       .setDirectory( __dirname + 'app/controllers')
-//       .bind(app);
+app.use('/', appController);
+app.use('/votes', votesController);
 
 
 // Errors
