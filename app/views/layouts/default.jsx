@@ -17,6 +17,9 @@ var DefaultLayout = React.createClass({
             <h1 className="wordmark">POPPYCOCK</h1>
             {this.props.children}
           </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js" type="text/javascript" />
+          <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" />
+          <script src="/javascripts/client.js" type="text/javascript" />
         </body>
       </html>
     );

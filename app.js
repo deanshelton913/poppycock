@@ -6,8 +6,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     router = express.Router(),
     app = express(),
-    socket_io = require( "socket.io" ),
-    io = socket_io(),
+    io = require( "socket.io" )(),
 
     // Controllers
     rootController = require('./app/controllers/RootController'),
@@ -20,7 +19,7 @@ var express = require('express'),
       // '/votes': votesController
     };
 
-app.io = io;
+
 // View Engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'jsx');
@@ -39,6 +38,9 @@ app.use(cookieParser());
 
 // Static route
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Socket.io
+app.io = io;  // Do this for some reason... StackOverflow me to... can I remove this?
 
 // Use Controlled routes,
 for(var route in controllerMap){
