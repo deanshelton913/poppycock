@@ -6,18 +6,21 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     router = express.Router(),
     app = express(),
+    socket_io = require( "socket.io" ),
+    io = socket_io(),
 
     // Controllers
-    appController = require('./app/controllers/AppController'),
+    rootController = require('./app/controllers/RootController'),
     votesController = require('./app/controllers/VotesController'),
     definitionsController = require('./app/controllers/DefinitionsController'),
 
-    // Routes
-    routes = {
-      '/': appController, // catch-all controller
-      '/votes': votesController
+    // Set up the Routes -> Controller relationship
+    controllerMap = {
+      '/': rootController, // handle all static pages, and homepage.
+      // '/votes': votesController
     };
 
+app.io = io;
 // View Engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'jsx');
@@ -37,9 +40,9 @@ app.use(cookieParser());
 // Static route
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Use Controlled routes
-for(var route in routes){
-  app.use(route, routes[route]);
+// Use Controlled routes,
+for(var route in controllerMap){
+  app.use(route, controllerMap[route](io)); // <-- Pass Socket.io to the controllers :D
 }
 
 // Errors

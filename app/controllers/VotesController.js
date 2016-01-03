@@ -1,8 +1,12 @@
-var express = require('express');
-var router = express.Router();
+// Votes Controller
+module.exports = function(io) {
+  var app = require('express');
+  var router = app.Router();
 
-router.get('/new', function(req, res, next) {
-  res.render('index', { name: 'John', title: 'PoppyCock' });
-});
+  router.get('/new', function(req, res, next) {
+    res.render('index', { title: 'PoppyCock' });
+  });
 
-module.exports = router;
+  return router;
+};
+
