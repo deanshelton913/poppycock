@@ -2,15 +2,12 @@
 
 var React = require('react');
 var DefaultLayout = require('./layouts/default');
-
 module.exports = React.createClass({
   render: function() {
     return (
       <DefaultLayout title={this.props.title}>
-        <div id="main">
-          <button className="ready">Im Ready</button>
-          <button className="how-to-play">How To Play</button>
-          <ul className="player-list">
+        <button className="how-to-play">How To Play</button>
+        <ul className="player-list">
             <li>
               <button>Waiting...<i className="player one fa fa-gamepad"></i></button>
             </li>
@@ -23,9 +20,10 @@ module.exports = React.createClass({
             <li>
               <button disabled="disabled">Waiting..<i className="player four fa fa-gamepad"></i></button>
             </li>
+            <button className="back-to-home-button button quit">Withdraw</button>
+
           </ul>
-        </div>
-    </DefaultLayout>
+          </DefaultLayout>
     );
   }
 });

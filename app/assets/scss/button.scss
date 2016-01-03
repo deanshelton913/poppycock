@@ -53,4 +53,9 @@
 .ready {
   @extend .cta;
   font-size: 2em;
+  &.submit {
+    width: 80%;
+    text-align: center;
+    margin: 1em 10% 0 10%;
+   }
 }

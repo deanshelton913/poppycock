@@ -3,9 +3,6 @@
 @import 'typography';
 @import 'components';
 
-body {
-  -webkit-text-size-adjust: none;
-}
 #content {
   max-width: 720px;
   margin: 0 auto;
@@ -15,6 +12,3 @@ body {
   padding-top: 1em;
 }
 
-#newWord {
- margin-top: 2em;
-}
