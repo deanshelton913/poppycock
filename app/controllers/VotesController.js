@@ -4,7 +4,7 @@ module.exports = function(io) {
   var router = app.Router();
 
   router.get('/new', function(req, res, next) {
-    res.render('index', { title: 'PoppyCock' });
+    res.render('votes_new', { title: 'PoppyCock' });
   });
 
   return router;

@@ -16,7 +16,8 @@ var express = require('express'),
     // Set up the Routes -> Controller relationship
     controllerMap = {
       '/': rootController, // handle all static pages, and homepage.
-      // '/votes': votesController
+      '/votes': votesController,
+      '/definitions': definitionsController
     };
 
 
