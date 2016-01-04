@@ -37,6 +37,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('default', ['shell:browserify_with_babel','watch']);
-  grunt.registerTask('build', ['shell:browserify_with_babel']);
+  grunt.registerTask('build', ['shell:browserify_with_babel','sass:dev']);
+  grunt.registerTask('default', ['build','watch']);
 };
