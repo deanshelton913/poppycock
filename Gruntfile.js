@@ -2,11 +2,12 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    concat: {
-      dist: {
-        src: ['app/views/**/*.jsx', 'app/assets/js/**/*.js'],
-        dest: 'public/javascripts/client.js',
-      },
+    shell: {
+      browserify_with_babel: {
+        command: function () {
+          return 'browserify -t [ babelify --presets [ react ] ] app/assets/js/client.js -o public/javascripts/client.js';
+        }
+      }
     },
     sass: {
       dev: {
@@ -21,8 +22,12 @@ module.exports = function(grunt) {
     },
     watch: {
       sass: {
-        files: ['app/assets/{,**/}*.{scss,sass,js}', 'app/views/**.jsx'],
-        tasks: ['sass:dev', 'concat:dist']
+        files: ['app/assets/{,**/}*.{scss,sass,js}'],
+        tasks: ['sass:dev']
+      },
+      scripts: {
+        files: ["app/assets/js/*.js"],
+        tasks: ["browserify_with_babel"]
       }
     }
   });
@@ -30,8 +35,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('default', [
-   'watch'
-  ]);
+  grunt.registerTask('default', ['shell:browserify_with_babel','watch']);
+  grunt.registerTask('build', ['shell:browserify_with_babel']);
 };
