@@ -1,9 +1,6 @@
-/* @jsx React.DOM */
-
 
 var React = require('react');
-var DefaultLayout = require('./layouts/default');
-module.exports = React.createClass({
+var VotesTemplate = React.createClass({
   render: function() {
     return (
       <DefaultLayout title={this.props.title}>
@@ -30,3 +27,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+module.exports = VotesTemplate;

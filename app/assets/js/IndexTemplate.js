@@ -1,9 +1,9 @@
-
 var React = require('react');
-var DefinitionsTemplate = React.createClass({
+var IndexTemplate = React.createClass({
   render: function() {
     return (
-      <DefaultLayout title={this.props.title}>
+      <div>
+        <button className="ready">I'm Ready</button>
         <button className="how-to-play">How To Play</button>
         <ul className="player-list">
           <li>
@@ -18,13 +18,10 @@ var DefinitionsTemplate = React.createClass({
           <li>
             <button disabled="disabled">Waiting..<i className="player four fa fa-gamepad"></i></button>
           </li>
-          <button className="back-to-home-button button quit">Withdraw</button>
-
         </ul>
-      </DefaultLayout>
+      </div>
     );
   }
 });
 
-
-module.exports = DefinitionsTemplate;
+module.exports = IndexTemplate;
