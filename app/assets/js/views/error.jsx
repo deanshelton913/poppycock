@@ -1,5 +1,5 @@
 var React = require('react');
-var DefaultLayout = require('./layouts/default');
+var DefaultLayout = require('./layout');
 var ErrorTemplate = React.createClass({
     render: function() {
       return (

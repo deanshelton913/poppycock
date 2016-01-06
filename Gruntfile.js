@@ -22,12 +22,12 @@ module.exports = function(grunt) {
     },
     watch: {
       sass: {
-        files: ['app/assets/{,**/}*.{scss,sass,js}'],
+        files: ['app/assets/{,**/}*.{scss,sass}'],
         tasks: ['sass:dev']
       },
       scripts: {
-        files: ["app/assets/js/*.js"],
-        tasks: ["browserify_with_babel"]
+        files: ["app/assets/js/*.js", "app/assets/js/views/*.js"],
+        tasks: ["shell:browserify_with_babel"]
       }
     }
   });
