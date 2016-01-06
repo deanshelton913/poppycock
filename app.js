@@ -8,23 +8,6 @@ var express = require('express'),
     app = express(),
     io = require( "socket.io" )();
 
-// Database
-var sequelize = new Sequelize('poppycock', 'postgres', 'mshCxU6HXG7pW_^_', {
-  host: 'localhost',
-  dialect: 'postgres',
-
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  }
-});
-
-// Or you can simply use a connection uri
-var sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname');
-
-
-
 // View Engine setup
 app.set('views', path.join(__dirname, 'app/assets/js/views'));
 app.set('view engine', 'jsx');

@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "poppycock",
+    "password": "banana!",
+    "database": "poppycock_dev",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "poppycock",
+    "password": "banana!",
+    "database": "poppycock_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "poppycock",
+    "password": "banana!",
+    "database": "poppycock",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
