@@ -7,11 +7,23 @@ Very much like Baulderdash, or Dictionairy Dabble.
 `npm install`
 
 ## Database (postgres)
-Create these db names in your local postgres:
+Install postgres, if you have not already.
+Run this in your local PSQL with admin rights.
+e.g.: `sudo psql -U postgres`
+```
+CREATE USER poppycock WITH PASSWORD 'banana!';
+CREATE DATABASE poppycock_test;
+CREATE DATABASE poppycock_dev;
+CREATE DATABASE poppycock;
+GRANT ALL PRIVILAGES ON DATABASE poppycock_test to poppycock;
+GRANT ALL PRIVILAGES ON DATABASE poppycock_dev to poppycock;
+GRANT ALL PRIVILAGES ON DATABASE poppycock to poppycock;
+```
 
 |poppycock_test|poppycock_dev|poppycock|
 | ------------ | -----------:|:--------|
 
+Run the migrations to create the tables.
 `sequelize db:migrate`
 
 ## Development
