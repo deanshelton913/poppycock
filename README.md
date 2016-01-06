@@ -7,9 +7,11 @@ Very much like Baulderdash, or Dictionairy Dabble.
 `npm install`
 
 ## Database (postgres)
-Install postgres, if you have not already.
-Run this in your local PSQL with admin rights.
-e.g.: `sudo psql -U postgres`
+
+1: Install postgres, if you have not already.
+
+2: Run this in your local PSQL with admin rights. e.g.: `sudo psql -U postgres` 
+
 ```
 CREATE USER poppycock WITH PASSWORD 'banana!';
 CREATE DATABASE poppycock_test;
@@ -17,14 +19,11 @@ CREATE DATABASE poppycock_dev;
 CREATE DATABASE poppycock;
 GRANT ALL PRIVILAGES ON DATABASE poppycock_test to poppycock;
 GRANT ALL PRIVILAGES ON DATABASE poppycock_dev to poppycock;
-GRANT ALL PRIVILAGES ON DATABASE poppycock to poppycock;
+GRANT ALL PRIVILAGES ON DATABASE poppycock to poppycock; 
 ```
 
-|poppycock_test|poppycock_dev|poppycock|
-| ------------ | -----------:|:--------|
+3: Run `sequelize db:migrate` to create the tables.
 
-Run the migrations to create the tables.
-`sequelize db:migrate`
 
 ## Development
 PoppyCock is built with React, and Socket.io.
