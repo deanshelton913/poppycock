@@ -6,6 +6,14 @@ Very much like Baulderdash, or Dictionairy Dabble.
 ## Installing
 `npm install`
 
+## Database (postgres)
+Create these db names in your local postgres:
+
+|poppycock_test|poppycock_dev|poppycock|
+| ------------ | -----------:|:--------|
+
+`sequelize db:migrate`
+
 ## Development
 PoppyCock is built with React, and Socket.io.
 Why? Because I wanted to try out these sexy new frameworks and see what they are all about.
